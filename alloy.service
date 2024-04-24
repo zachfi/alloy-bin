@@ -1,0 +1,15 @@
+[Unit]
+Description=Kubernetes Node Manager
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+PIDFile=/var/run/alloy/alloy.pid
+ExecStart=/usr/bin/nodemanager
+EnvironmentFile=/etc/alloy.env
+
+[Install]
+WantedBy=multi-user.target
