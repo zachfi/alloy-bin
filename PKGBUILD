@@ -16,7 +16,7 @@ sha256sums_x86_64=('c926b29ed75d37b1bb2945a70f8f3e580b9f6192467ff956e3bbf52b70ad
 
 package() {
 	case "$CARCH" in
-	arm64)
+	aarch64)
 		_pkgarch="arm64"
 		;;
 	x86_64)
